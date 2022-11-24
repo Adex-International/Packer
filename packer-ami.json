@@ -1,0 +1,21 @@
+{
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "access_key": "your access_key",
+            "secret_key": "your secret_key",
+            "region": "us-east-1",
+            "ami_name": "firstAMI",
+            "instance_type": "t2.micro",
+            "source_ami": "ami-08c40ec9ead489470",
+            "ssh_username": "ubuntu"
+
+        }
+    ], 
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "setup.sh"
+        }
+    ]
+}
